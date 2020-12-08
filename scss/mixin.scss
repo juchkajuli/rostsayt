@@ -1,0 +1,60 @@
+@mixin regular-text {
+ font-size: $fontSize;
+ font-weight: 400;
+ line-height: 1.2;
+ color: $color;
+} 
+
+@mixin red-text {
+ font-size: $fontSize;
+ font-weight: 400;
+ line-height: 1.2;
+ color: $redColor;
+}
+
+@mixin boldText {
+ font-size: $fontSizeH1;
+ font-weight: 400;
+ line-height: 1.2;
+ color: #131313;
+}
+
+@mixin flexcenter {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+@mixin flexible {
+ @include flexcenter();
+ justify-content: space-between;
+
+}
+
+@mixin border-radius($radius) {
+ -webkit-border-radius: $radius;    // Chrome и Safari
+ -moz-border-radius: $radius;    // Firefox
+ -ms-border-radius: $radius;    // Internet Explorer
+ -o-border-radius: $radius;    // Opera
+ border-radius: $radius; 
+}
+
+@mixin btn-transform {
+background-color: $redColor;
+cursor: $cursor;
+@include border-radius(6px);
+color: #ffffff;
+border-color: $redColor;
+padding: 6px 12px;
+border: 1px solid transparent;
+box-sizing: border-box;
+}
+
+@mixin maxWidth {
+  max-width: $maxPercent;
+  width: $maxPercent;
+}
+
+
+
+
